@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import {Article} from './components/pages/Article'
 
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
   return (
   <>
   <h1>Blog con react</h1>
+  <Article/>
   
   
   </>

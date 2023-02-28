@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import {Article} from './components/pages/Article'
+import { Rutas } from './routes/Rutas'
+import { Header } from './components/layout/Header'
+import { Nav } from './components/layout/Nav'
 
 
 function App() {
@@ -7,8 +9,9 @@ function App() {
 
   return (
   <>
-  <h1>Blog con react</h1>
-  <Article/>
+  <Header />
+  <Nav />
+  <Rutas />
   
   
   </>

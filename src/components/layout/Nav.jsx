@@ -1,7 +1,14 @@
-import React from 'react'
+import * as React from 'react';
+
 
 export const Nav = () => {
   return (
-    <div>Nav</div>
+    <>
+    <h1>Nav</h1>
+    </>
   )
-}
+
+  }
+
+
+  

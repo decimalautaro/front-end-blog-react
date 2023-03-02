@@ -8,7 +8,7 @@ export const Header = () => {
           <div className='logo'>
               <div className='play'></div>
           </div>
-          <h1>Blog con react</h1>
+          <h1>Mi Blog con React</h1>
       </header>
   )
 }

@@ -147,6 +147,7 @@ input[type="button"]{
   background: #f6f7f9;
   border-left: 1px solid #ddd;
   padding: 20px;
+  min-height: 630px;
 }
 
 .lateral > div{

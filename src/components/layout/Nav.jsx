@@ -17,29 +17,14 @@ export const Nav = () => {
   };
 
   return (
-    <div>
-      <MenuIcon onClick={toggleDrawer(true)} />
-      <Drawer anchor="left" open={open} onClose={toggleDrawer(false)}>
-        <List>
-          <ListItem button onClick={() => console.log('Home')}>
-            <ListItemIcon>
-   
-            </ListItemIcon>
-            <ListItemText primary="Home" />
-          </ListItem>
-          <ListItem button onClick={() => console.log('About')}>
-            <ListItemIcon>
-            </ListItemIcon>
-            <ListItemText primary="About" />
-          </ListItem>
-          <ListItem button onClick={() => console.log('Contact')}>
-            <ListItemIcon>
-            </ListItemIcon>
-            <ListItemText primary="Contact" />
-          </ListItem>
-        </List>
-      </Drawer>
-    </div>
+    <nav className='nav'>
+      <ul>
+        <li><a href='#'>Inicio</a></li>
+        <li><a href='#'>Blog</a></li>
+        <li><a href='#'>Contacto</a></li>
+
+      </ul>
+    </nav>
   )
 
   }

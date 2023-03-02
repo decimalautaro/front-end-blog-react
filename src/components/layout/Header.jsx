@@ -1,6 +1,5 @@
 import React from 'react'
-import { AppBar, Toolbar, Typography } from '@mui/material';
-import { Nav } from './Nav'
+
 
 export const Header = () => {
   return (

@@ -5,17 +5,6 @@ import { NavLink } from 'react-router-dom';
 export const Nav = () => {
   const [open, setOpen] = useState(false);
 
-  const toggleDrawer = (open) => (event) => {
-    if (
-      event.type === 'keydown' &&
-      (event.key === 'Tab' || event.key === 'Shift')
-    ) {
-      return;
-    }
-
-    setOpen(open);
-  };
-
   return (
     <nav className='nav'>
       <ul>

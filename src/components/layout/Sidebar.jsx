@@ -11,15 +11,6 @@ export const Sidebar = () => {
         </form>
       </div>
 
-      <div className='add'>
-        <h3 className='title'>Añadir blog</h3>
-        <form>
-          <input type='text' id='title' placeholder='Titulo'/>
-          <textarea  id='description' placeholder='Descripción'/>
-          <input type='submit' id='save' value='Guardar'/>
-
-        </form>
-      </div>
     </aside>
   )
 }

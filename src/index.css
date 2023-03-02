@@ -114,9 +114,31 @@ body{
   padding-right: 25px;
 }
 
+.home{
+  width: 85%;
+  padding: 55px;
+  padding-bottom: 75px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 6px #ddd;
+  margin: 25px auto;
+}
+.home h1{
+  font-size: 30px;
+  color: #444;
+}
+
+.home p{
+  display: block;
+  margin-bottom: 40px;
+
+}
+
+.button,
 button,
 input[type="submit"],
 input[type="button"]{
+  text-decoration: none;
   width: 100px;
   background: #0b70e1;
   color: white;

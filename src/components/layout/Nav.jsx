@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Drawer, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
-import { Menu as MenuIcon } from '@mui/icons-material';
 import {useState} from 'react'
+import { NavLink } from 'react-router-dom';
+
 export const Nav = () => {
   const [open, setOpen] = useState(false);
 
@@ -19,9 +19,11 @@ export const Nav = () => {
   return (
     <nav className='nav'>
       <ul>
-        <li><a href='#'>Inicio</a></li>
-        <li><a href='#'>Blog</a></li>
-        <li><a href='#'>Contacto</a></li>
+        <li><NavLink to="/home">Inicio</NavLink></li>
+        <li><NavLink to="/articles">Articulos</NavLink></li>
+        <li><NavLink to="/create-article">Crear articulo</NavLink></li>
+
+
 
       </ul>
     </nav>

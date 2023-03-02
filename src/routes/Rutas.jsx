@@ -6,6 +6,7 @@ import { Header } from "../components/layout/Header";
 import { Nav } from "../components/layout/Nav";
 import { Sidebar } from "../components/layout/Sidebar";
 import { Footer } from "../components/layout/Footer";
+import { Create } from "../components/pages/Create";
 
 
 export const Rutas = () => {
@@ -19,6 +20,8 @@ export const Rutas = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/articles" element={<Articles/>} />
+                <Route path="/create-article" element={<Create/>} />
+
 
 
 

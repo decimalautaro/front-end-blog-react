@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
+import { Global } from '../../helpers/Global';
 
 export const Articles = () => {
   const [articles, setArticles] = useState([])
@@ -8,7 +9,7 @@ export const Articles = () => {
   },[])
   
   const getArticles = async()=>{
-    const URL = "http://localhost:3000/api/articles/all-items";
+    const URL = Global.url+"articles/all-items";
     let petition = await fetch(URL, {method: "GET"});
     let data = await petition.json();
     

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
 import { Global } from '../../helpers/Global';
+import { Petition } from '../../helpers/Petition';
 
 export const Articles = () => {
   const [articles, setArticles] = useState([])
@@ -9,12 +10,10 @@ export const Articles = () => {
   },[])
   
   const getArticles = async()=>{
-    const URL = Global.url+"articles/all-items";
-    let petition = await fetch(URL, {method: "GET"});
-    let data = await petition.json();
-    
-    if (data.status === "success") {
-      setArticles(data.articles)
+    const {datos, loading} = await Petition (Global.url+"articles/all-items", "GET")
+
+    if (datos.status === "success") {
+      setArticles(datos.articles)
     }
   }
 

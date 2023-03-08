@@ -5,6 +5,7 @@ import { Petition } from '../../helpers/Petition';
 
 export const Articles = () => {
   const [articles, setArticles] = useState([])
+  const [loading, setLoading] = useState(true)
   useEffect(()=>{
     getArticles()
   },[])
@@ -15,10 +16,12 @@ export const Articles = () => {
     if (datos.status === "success") {
       setArticles(datos.articles)
     }
+    setLoading(false)
   }
 
   return (
    <>
+   {loading ? "Cargando..." : ""}
    {
    articles.length >= 1 ? (
    articles.map(article =>{

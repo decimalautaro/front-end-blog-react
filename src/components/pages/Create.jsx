@@ -1,21 +1,34 @@
 import React from 'react'
 import { useState } from 'react'
 import { useForm } from "../../hooks/useForm";
+import { Petition } from "../../helpers/Petition";
+import { Global } from '../../helpers/Global';
 
 export const Create = () => {
 
   const {form, send, change} = useForm({})
+  const [ result, setResult] = useState(false)
 
-  const saveArticle = (e)=>{
-    e.preventDefault;
-    let newArticle = JSON.stringify(form);
+  const saveArticle =  async(e) => {
+    e.preventDefault();
+
+    let newArticle = form;
+
+    const { datos, loading } = await Petition(Global.url+"articles/create-article", "POST", newArticle)
+
+    if(datos.status === "success"){
+      setResult(true);
+    }
+    console.log(datos)
+      
   }
 
   return (
     <div className='home'>
     <h1>Crear articulo.</h1>
     <pre>{JSON.stringify(form)}</pre>
-    <form className='form' >
+    <strong> {result ? "Articulo guardado con exito!!" : "asd"} </strong>
+    <form className='form' onSubmit={saveArticle} >
       <div className='form-grup'>
         <label  htmlFor='title'>Titulo</label>
         <input type="text" name="title" onChange={change}/>
